@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>top</title>
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}base.css">
+    <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}admin.css">
+    <link href="{$smarty.const.ADMIN_CSS_URL}font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<span class="logo">
+			<img src="{$smarty.const.ADMIN_IMG_URL}logo-gray.png" alt="您的浏览器版本过低哦">
+		</span>
+		<span class="span1">文章发布平台</span>
+		<span class="span2">ARTICLE PUBLISHING PLATFORM</span>
+		<span class="span3">
+			<i class="fa fa-user fa-lg"></i>&nbsp;&nbsp;&nbsp;
+			<em class="admin">欢迎登录！尊敬的{if $smarty.session.user_roleid == 1}管理员{else}用户{/if}：
+			</em>&nbsp; {$smarty.session.username}
+			<em class="admin">&nbsp;</em>
+		</span>
+		<span class="span6">
+			<iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=zhuhai&num=5"></iframe>
+		</span>
+		<span class="span5">登录时间：{$smarty.session.lasttime}</span>
+		<span class="span4"><a href="{$smarty.const.__MODULE__}/User/logout" target='_top'>退出登录</a></span>
+	</div>
+</body>
+
+
+</html>

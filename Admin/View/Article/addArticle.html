@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布文章</title> 
+  <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}base.css">
+  <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}admin.css">
+  <link href="{$smarty.const.ADMIN_CSS_URL}font-awesome.min.css" rel="stylesheet">
+	<link href="{$smarty.const.ADMIN_CSS_URL}addArticle.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}addArticle.js"></script>
+</head>
+<body>
+  
+  <!-- 配置文件 -->
+  <script type="text/javascript" charset="utf-8" src="{$smarty.const.TOOLS_PATH}ueditor/ueditor.config.js"></script>
+  <!-- 编辑器源码文件 -->
+  <script type="text/javascript" charset="utf-8" src="{$smarty.const.TOOLS_PATH}ueditor/ueditor.all.min.js"> </script>
+  <script type="text/javascript" charset="utf-8" src="{$smarty.const.TOOLS_PATH}ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script id="editor" type="text/plain">
+  </script>
+    <!-- 实例化编辑器 -->
+  <script>
+  {literal}
+      var editor = new UE.ui.Editor({initialFrameHeight:300});
+      editor.render("MyTextarea");
+  {/literal}
+  </script>
+	<div class="main_box">
+    <div class="top_bar">
+      <span class="cur_location">
+        <i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;
+        当前位置：文章管理&nbsp;
+        <i class="fa fa-angle-double-right">&nbsp;
+        发布文章</i>
+      </span>
+    </div> 
+	  <div class="box">
+        <ul>
+            <li class="on">通用信息</li>
+            <li>文章内容</li>
+        </ul>
+        <form action="{$smarty.const.__SELF__}" method="post" id="content">
+            <div style="display:block" class="lbox">
+               <table class="tbl">
+                <tr>
+                  <td>标题：</td><td><input class="ipt" name="article_title" type="text"></td>
+                </tr>
+
+                <tr>
+                  <td>作者：</td><td><input class="ipt" name="article_author" type="text"></td>
+                 
+                </tr>
+                <tr>
+                    <td>文章类型：</td>
+                    <td>
+                      <select name="article_type">
+                          <option value="小说">小说</option>
+                          <option value="散文" selected="selected">散文</option>
+                          <option value="诗词">诗词</option>
+                          <option value="童话">童话</option>
+                          <option value="说明文">说明文</option>
+                          <option value="议论文">议论文</option>
+                          <option value="记叙文">记叙文</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td>公有：</td><td><input name="article_authority" value="公有" type="radio" checked="checked"></td>
+                </tr>
+                <tr>
+                  <td>私有：</td><td><input name="article_authority" value="私有" type="radio"></td>
+                </tr>
+               </table>
+            </div>
+            
+            <div style="display:none" class="rbox">
+                 <textarea name="article_text" id="MyTextarea" cols="30" rows="10">
+                 </textarea>
+            </div>
+            <span class="btn">
+              <input class="btn_chd" type="submit" value="提交">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="btn_chd" type="reset" value="重置">
+            </span>       
+        </form>
+        
+    </div>
+  </div>
+</body>
+
+
+</html>

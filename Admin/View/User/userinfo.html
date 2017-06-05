@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户列表</title>
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}base.css">
+    <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}admin.css">
+    <link href="{$smarty.const.ADMIN_CSS_URL}font-awesome.min.css" rel="stylesheet">
+    <link href="{$smarty.const.ADMIN_CSS_URL}userinfo.css" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="main_box">
+		<div class="top_bar">
+			<span class="cur_location">
+				<i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;
+				当前位置：个人中心&nbsp;
+				<i class="fa fa-angle-double-right">&nbsp;
+				个人信息</i>
+			</span>
+		</div>
+		<div class="box">
+			<div class="left">
+				<div class="headImg">
+					<img src="{$smarty.const.SITE_URL}{$user_info.userimg}" alt="&nbsp;无头像">
+				</div>
+				<div class="headInfo">
+					<p>
+						<span>
+							<i class="fa fa-clock-o fa-lg"></i>
+							注册时间：
+						</span>
+					</p>
+					<br>
+					<p><span>{$user_info.registertime}</span></p>
+					<br>
+					<p>
+						<span>
+							<i class="fa fa-clock-o fa-lg"></i>
+							登录时间：
+						</span>
+					</p>
+					<br>
+					<p><span>{$user_info.lasttime}</span></p>
+				</div>
+				
+			</div>
+			<div class="right">
+				<div class="topbox">
+						<i class="fa fa-drivers-license-o fa-lg"></i>	
+						&nbsp;
+						<span class="zhxx">账户信息</span>								
+				</div>
+				<div class="midbox">
+					
+					<p>
+						<span>
+							<i class="fa fa-address-book fa-lg"></i>	用户名：{$user_info.username}
+						</span>
+					</p>
+					<br><br>
+					<p>
+						<span>
+							<i class="fa fa-lock fa-lg"></i>	
+							密码：{$user_info.password}
+						</span>
+					</p>
+					<br><br>
+					<p>
+						<span>
+							<i class="fa fa-street-view fa-lg"></i>	
+							性别：{$user_info.usersex}
+						</span>
+					</p>
+					<br><br>
+					<p>
+						<span>
+							<i class="fa fa-envelope fa-lg"></i>	
+							邮箱：{$user_info.email}
+						</span>
+					</p>
+					<br><br>
+					<p>
+						<span>
+							<i class="fa fa-qq fa-lg"></i>
+							QQ：{$user_info.qq}
+						</span>
+					</p>
+					<br><br>
+					<p>
+						<span>
+							<i class="fa fa-phone fa-lg"></i>
+							电话：{$user_info.mobile}
+						</span>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>

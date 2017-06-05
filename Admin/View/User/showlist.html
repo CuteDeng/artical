@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户列表</title>
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}base.css">
+    <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}admin.css">
+    <link href="{$smarty.const.ADMIN_CSS_URL}font-awesome.min.css" rel="stylesheet">
+	<style>
+		{literal}
+		.box{
+			width: 95%;
+			margin: 0 auto;
+		}
+		.box table{
+			margin-top: 20px;
+			line-height: 20px;
+			font-size: 15px;
+			text-align: center;
+		}
+		
+		{/literal}
+	</style>
+	
+</head>
+<body>
+	<div class="main_box">
+		<div class="top_bar">
+			<span class="cur_location">
+				<i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;
+				当前位置：权限管理&nbsp;
+				<i class="fa fa-angle-double-right">&nbsp;
+				用户列表</i>
+			</span>
+		</div>
+		<div class="box">
+			<table border="1" width="100%" cellpadding="0" cellspacing="0">
+				<tr><th>头像</th><th>姓名</th><th>密码</th><th>性别</th><th>邮箱</th><th>QQ</th><th>电话</th><th>注册时间</th><th>最后登录时间</th><th>操作</th></tr>
+				{foreach $user_info as $v}
+				<tr>
+					<td><img src="{$smarty.const.SITE_URL}{$v.userimg}" height="30" width="30"></td>
+					<td>{$v.username}</td>
+					<td>{$v.password}</td>
+					<td>{$v.usersex}</td>
+					<td>{$v.email}</td>
+					<td>{$v.qq}</td>
+					<td>{$v.mobile}</td>
+					<td>{$v.registertime}</td>
+					<td>{$v.lasttime}</td>
+					<td>
+						<a class="forbid" href="{$smarty.const.__CONTROLLER__}/forbidUser/userid/{$v.userid}">{if $v.forbid == 0}已禁用{elseif $v.forbid == 1}禁用{/if}</a>
+						&nbsp;|&nbsp;
+						<a href="{$smarty.const.__CONTROLLER__}/freeUser/userid/{$v.userid}">解禁</a>
+					</td>
+				</tr>
+				{/foreach}
+				<tr>
+	                <td colspan="10" style="text-align: center;">
+	                    {$pagelist}
+	                </td>
+	            </tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script>
+	var forbid = document.getElementsByTagName('a');
+	for(var i=0; i<forbid.length;i++){
+		if(forbid[i].innerHTML == "已禁用"){
+			forbid[i].removeAttribute("href");
+			//forbid[i].nextSibling.removeAttribute("href");
+		}
+		if(forbid[i].innerHTML == "禁用"){
+			//forbid[i].removeAttribute("href");
+			forbid[i+1].removeAttribute("href");
+		}
+	}
+</script>
+
+</html>

@@ -1,0 +1,278 @@
+@charset "utf-8";
+.banner {
+    position: relative;
+}
+.banner a {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: url("../imgs/banner.png") no-repeat top center;
+    width: 100%;
+    height: 480px;
+}
+#main {
+    width: 910px;
+    min-height: 500px;
+    margin: 50px auto 20px ;
+    -moz-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+}
+
+h2.top_title {
+    margin: 4px 20px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 20px;
+    font-weight: bold;;
+    color: #990000;
+}
+
+#wizard {
+    border: 4px solid #990000;
+    position: relative;
+    width: 910px;
+    font-size: 12px;
+    height: 520px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #FFF;  
+}
+#wizard .logo{
+    position: absolute;
+    top: 140px;
+    right: 80px;
+    width: 300px;
+    height: 185px;
+    background: url("../imgs/logo.png");  
+}
+#wizard .userRegist {
+    position: absolute;
+    top: 365px;
+    right: 100px;
+    width: 250px;
+    height: 70px;
+}
+#wizard .userRegist .U{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: 80px;
+}
+#wizard .userRegist .hyzz{
+    position: absolute;
+    top: 10px;
+    left: 56px;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 楷体;
+    color: #CCC;
+}
+#wizard .userRegist .REGISTER{
+    position: absolute;
+    top: 44px;
+    left: 60px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 楷体;
+}
+#wizard .items {
+    width: 3000px;
+    clear: both;
+    position: absolute;
+    font-size: 14px;
+}
+
+#wizard .right {
+    float: right;
+}
+
+#wizard #status {
+    height: 35px;
+    background:#9A0001;
+    padding-left: 25px !important;
+}
+
+#status li {
+    float: left;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+#status li.active {
+    background-color: #9A0001;
+    font-weight: normal;
+}
+
+.input {
+    width: 220px;
+    height: 25px;
+    margin: 10px auto;
+    line-height: 20px;
+    border: 1px solid #d3d3d3;
+    padding: 2px;
+    padding-left: 40px;
+    background-color: #E7E7E7; 
+}
+
+.correct {
+    position: relative;
+}
+.errorbox {
+    border:1px solid red;
+}
+.correct::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left:-30px;
+    width: 20px;
+    height: 20px;
+    background:url("../imgs/img.png") no-repeat -20px 0;
+}
+.page {
+    position: relative;
+    padding: 20px 30px;
+    width: 850px;
+    float: left;
+}
+/*提示信息*/
+.usernameNotice,.passwordNotice,.password1Notice,.mailNotice,.qqNotice,.telNotice {
+    position: absolute;
+    left: 310px;
+    display: inline-block;
+    width: 150px;
+    height: 27px;
+    font-size: 14px;
+    color: #FF4D4D;
+}
+
+.usernameNotice,.mailNotice {
+    top: 123px;  
+}
+.passwordNotice,.qqNotice {
+    top: 199px;
+}
+.telNotice{
+   top: 274px;
+}
+.password1Notice {
+    top: 350px;
+}
+
+/*密码强度*/
+#wizard .items .page .lv1{background:#f00;}
+#wizard .items .page .lv2{background:#ffd800;}
+#wizard .items .page .lv3{background:#00ff21;}
+
+#strength_length {
+    /*position: absolute;
+    top: 197px;
+    left: 295px;*/
+    /*width: 50px;*/
+    margin: 5px 0 15px 0;
+    height: 30px;
+    line-height: 30px;
+    /*text-align: center;*/
+    /*background-color: red;*/
+}
+#strength_length span {
+    position: relative;
+    display:inline-block;     
+    width:70px;
+    height:30px;
+    line-height:30px; 
+    margin:0 1px; 
+    background:#ddd;
+    text-align:center;
+    font-weight: bold;
+}
+.page span {
+    position: absolute;
+    font-size: 15px;
+    width: 30px;
+    height: 31px;
+    background-color: #8A8987;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+.page .email_icon,.page .username_icon {
+    top: 122px;
+    left: 30px;
+}
+.page .qq_icon,.page .password_icon {
+    font-size: 14px;
+    top: 197px;
+    left: 30px;
+}
+.page .password1_icon {
+    font-size: 20px;
+    top: 346px;
+    left: 30px;
+}
+.page .tel_icon{
+    font-size: 20px;
+    top: 272px;
+    left: 30px;
+}
+
+.page h3 {
+    height: 42px;
+    font-size: 16px;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 5px
+}
+
+.page h3 em {
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal
+}
+
+.page p {
+    line-height: 24px;
+}
+
+.page p label {
+    font-size: 14px;
+    display: block;
+}
+
+.btn_nav {
+    height: 36px;
+    line-height: 36px;
+    margin: 20px auto;
+}
+
+.prev, .next {
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    color: #fff;
+    line-height: 32px;
+    border: 1px solid #616161;
+    cursor: pointer;
+    background-color: #990000;
+}
+.prev {
+    top: 420px;
+    left: 120px; 
+}
+.next {
+    top: 420px;
+    right: 120px; 
+}
+
+
+
+
+

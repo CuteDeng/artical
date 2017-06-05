@@ -1,0 +1,72 @@
+* {margin:0;padding:0;border:0;}
+body{
+	background-color: #f0eeef;
+}
+#main {
+	width:100%; 
+	height:90%; 
+	margin:auto; 
+	/*box-shadow: 7px 7px 7px #E0E0E0;*/
+}
+#left {
+	width:80%; 
+	height:90%; 
+	background:#ffffff; 
+	float:left;
+}
+#right {width:20%; height:105%;background:#CACACA; float:left;}
+#content {
+	height:85%; 
+	padding-top:1px;
+	border-bottom: 1px solid #E0E0E0;
+}
+#content-title{color:green;font-size:14px;width:245px;margin:10px auto;}
+hr {border:1px solid #E0E0E0; width:90%; margin:auto;}
+#show_msg {
+	width:88%;
+	margin-left:47px;
+	margin-top:10px;
+	font-size:14px;
+	font-weight:bold;
+	height:85%;
+	overflow: auto;
+}
+#send {height:30%;}
+#btn_send{
+	width: 50px;
+	height: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+#result{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 15px;
+}
+#control {position:relative; top:10px;}
+select,textarea {border:1px solid gray;margin-top: 5px;}
+.comment{width:80%;height: 60px; margin:0 auto; position:relative} 
+#msg {width:100%;height: 100%;}
+/*//表情*/
+span.emotion{width:42px; height:20px; background:url("../imgs/icon.gif") no-repeat 2px 2px;  
+padding-left:20px; cursor:pointer} 
+span.emotion:hover{background-position:2px -28px} 
+.qqFace{margin-left: 60px;margin-top: -20px;background:#fff;padding:2px;border:2px #dfe6f6 solid;} 
+.qqFace table td{padding:0px;} 
+.qqFace table td img{cursor:pointer;border:1px #fff solid;} 
+.qqFace table td img:hover{border:1px #0066cc solid;} 
+
+/*//右侧信息*/
+#right h2 {color:#8B4513;font-size:14px;position:relative; left:36px;top:24px; width:150px; }
+#right #user { position:relative; top:46px;left:48px;   }
+
+ul {font-size:12px;  list-style:none; width:110px; }
+
+#anniu {margin-top:280px; margin-left:50px;}
+#anniu input {cursor: pointer; margin-top:10px; width:98px;height:30px; background:#3AC697; color:white; border:2px solid white;}
+
+

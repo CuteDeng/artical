@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员列表</title>
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}base.css">
+    <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}admin.css">
+    <link href="{$smarty.const.ADMIN_CSS_URL}font-awesome.min.css" rel="stylesheet">
+	<style>
+		{literal}
+		.box{
+			width: 95%;
+			margin: 0 auto;
+		}
+		.box table{
+			margin-top: 20px;
+			line-height: 20px;
+			font-size: 15px;
+			text-align: center;
+		}
+		{/literal}
+	</style>
+</head>
+<body>
+	<div class="main_box">
+		<div class="top_bar">
+			<span class="cur_location">
+				<i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;
+				当前位置：权限管理&nbsp;
+				<i class="fa fa-angle-double-right">&nbsp;
+				管理员列表</i>
+			</span>
+		</div>
+		<div class="box">
+			<table border="1" width="100%" cellpadding="0" cellspacing="0">
+				<tr><th>ID</th><th>姓名</th><th>密码</th><th>昵称</th><th>注册时间</th><th>最后登录时间</th></tr>
+				{foreach $manager_info as $v}
+				<tr>
+					<td>{$v.userid}</td>
+					<td>{$v.username}</td>
+					<td>{$v.password}</td>
+					<td>{$v.nickname}</td>
+					<td>{$v.registertime}</td>
+					<td>{$v.lasttime}</td>
+				</tr>
+				{/foreach}
+			</table>
+		</div>
+	</div>
+</body>
+</html>

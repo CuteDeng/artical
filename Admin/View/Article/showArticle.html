@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章内容</title>
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}base.css">
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}admin.css">
+	<link href="{$smarty.const.ADMIN_CSS_URL}font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}showArtical.css">	
+</head>
+<body>
+	<div class="main_box">
+	    <div class="top_bar">
+	      <span class="cur_location">
+	        <i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;
+	        当前位置：文章管理&nbsp;
+	        <i class="fa fa-angle-double-right">&nbsp;
+	        文章内容</i>
+	      </span>
+	    </div> 
+		<div class="box">
+			<div class="head" >
+				<table width="100%">
+					<tr>
+		    			<th colspan="3">{$info.article_title}</th>
+		  			</tr>
+					<tr><td>作者：{$info.article_author}</td><td>类型：{$info.article_type}</td><td>发布时间：{$info.article_time}</td></tr>
+				</table>
+			</div>
+			<div class="content">
+				{$info.article_text}
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

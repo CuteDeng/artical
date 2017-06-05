@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+.top {
+	width: 1000px;
+	height: 80px;
+	margin:0 auto;
+	padding-top: 70px;
+	text-align: center;
+}
+.top span {
+	font-size: 50px;
+	font-weight:700;
+}
+.center {
+	height: 300px;
+}
+.center .left{
+	position: relative;
+	height: 100%;
+	width: 500px;
+	margin-left: 50px;
+}
+.center .left .logo{
+	position: absolute;
+	top: 0;
+	left: 180px;
+	width: 300px;
+	height: 185px;
+	background: url("../imgs/logo.png");
+	
+}
+.center .left .userlogin {
+	position: absolute;
+	top: 220px;
+	left: 250px;
+	width: 250px;
+	height: 70px;
+}
+.center .left .userlogin .U{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	font-size: 80px;
+}
+.center .left .userlogin .hydl{
+	position: absolute;
+	top: 10px;
+	left: 56px;
+	font-size: 38px;
+	font-weight: bold;
+	font-family: 楷体;
+	color: #CCC;
+}
+.center .left .userlogin .SERLOGIN{
+	position: absolute;
+	top: 44px;
+	left: 60px;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: 楷体;
+}
+.center .right{
+	position: relative;
+	height: 100%;
+	width: 600px;
+	background-color: #980000;
+}
+.center .right .login_top {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 15px 15px;
+}
+.center .right .login_box {
+	position: absolute;
+	top: 50px;
+	left: -113px;
+	width: 520px;
+	height: 250px;
+	background: url("../imgs/1.png") no-repeat;
+}
+.center .right .login_box form{
+	position: absolute;
+	top: 25px;
+	left: 170px;
+	font-size: 14px;
+}
+/*输入框*/
+.center .right .login_box form .login_input{
+	background-color: #E7E7E7;
+	border: 1px solid #8A8987;
+	width: 120px;
+	height: 25px;
+	padding-left: 40px;
+}
+.center .right .login_box form span {
+	position: absolute;
+	font-size: 15px;
+	width: 30px;
+	height: 25px;
+	background-color: #8A8987;
+	color: #fff;
+	text-align: center;
+	line-height: 25px;
+}
+.center .right .login_box form .user_icon {
+	top: 1px;
+	left: 43px;
+}
+.center .right .login_box form .pwd_icon {
+	top: 46px;
+	left: 43px;
+	width: 30px;
+	height: 26px;
+}
+.center .right .login_box form .login_btn {
+	text-align: center;
+	display: inline-block;
+	width: 75px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #3E4357;
+	background-color: #CFCCBE;
+	border-radius:3px;
+	cursor: pointer;
+}
+/*验证码*/
+#captcha{
+	margin-top: 10px;
+}
+.center .right .login_box form .captcha{
+	width: 50px;
+	padding-left: 5px;
+	font-size: 16px;
+}

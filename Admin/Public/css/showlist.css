@@ -1,0 +1,28 @@
+
+.right_con{	
+	margin: 0 auto;
+	width: 95%;
+	margin-top: 20px;
+}
+.right_con table{
+	line-height: 25px;
+	font-size: 16px;
+	text-align: center;
+}
+.search_box {
+	width: 400px;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 auto;
+}
+.search_input {
+	border:1px solid #E0E0E0;
+	width: 200px;
+	height: 25px;
+	padding-left: 10px;
+}
+.search_btn {
+	width: 50px;
+	height: 28px;
+	text-align: center;
+}
